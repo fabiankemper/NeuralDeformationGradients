@@ -1,0 +1,5 @@
+add_subdirectory(character_viewer)
+add_subdirectory(pmp_ext)
+add_subdirectory(volumetric_base)
+add_subdirectory(volumetric_skinning)
+add_subdirectory(volumetric_character)

@@ -1,0 +1,56 @@
+build/
+data/
+config/
+meshes/
+training_data/
+tmp/
+out/
+build*/
+!data/bary_warp/
+.vscode/
+
+*.npz
+*.npy
+*.rig
+*.obj
+*.off
+*.pth
+*.fbx
+*.txt
+*.zip
+!**/CMakeLists.txt
+
+# settings from polyscope
+imgui.ini
+.polyscope.ini
+
+# marked frames
+**/marked_frames.txt
+
+# pyenv
+.python-version
+
+# python files
+__pycache__/
+
+# clion build directories
+cmake-build-*/
+
+# vscode
+.vscode/
+
+# intelliJ
+.cache
+.idea
+
+# python
+.venv/
+
+# do not include test files
+test.fbx
+
+# screenshots
+*.png
+
+# selection / debug files
+*.sel
