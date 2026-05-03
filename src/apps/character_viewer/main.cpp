@@ -55,8 +55,6 @@ auto parse_cmd_line(const argparse::ArgumentParser& program) -> bool
             std::cerr << "samples_dir does not contain skin directory.\n";
             return false;
         }
-
-        return false;
     } else {
         std::cout << "No samples found.\n";
     }
