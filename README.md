@@ -5,7 +5,7 @@
 ### Clone the repository
 
 ```bash
-git clone https://github.com/fabiankemper/NeuralDeformationGradients
+git clone https://github.com/fabiankemper/NeuralDeformationGradients.git
 cd NeuralDeformationGradients
 ```
 
