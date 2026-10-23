@@ -62,7 +62,7 @@ endif ()
 
 add_library(PMPCharacter STATIC ${SOURCES} ${HEADERS})
 
-target_include_directories(PMPCharacter PUBLIC ${FBX_INCLUDES})
+target_include_directories(PMPCharacter PUBLIC "${PMP_CHARACTER_EXT_DIR}/src" ${FBX_INCLUDE_DIRS})
 target_link_libraries(PMPCharacter PUBLIC pmp nlohmann_json::nlohmann_json ${FBX_LIBRARIES})
 
 if (PMP_BUILD_VIS)
@@ -71,10 +71,6 @@ if (PMP_BUILD_VIS)
 endif ()
 
 include_directories(PMPCharacter PUBLIC "${PMP_CHARACTER_EXT_DIR}/src")
-
-set_target_properties(PMPCharacter PROPERTIES
-    INTERFACE_INCLUDE_DIRECTORIES "${PMP_CHARACTER_EXT_DIR}/src"
-)
 
 # VISUAL COMPONENTS
 set(HEADERS
