@@ -22,6 +22,7 @@ target_link_libraries(volumetric_skinning PUBLIC fast_rotation_fitting)
 
 if (PMP_BUILD_VIS)
     target_compile_definitions(volumetric_skinning PUBLIC WITH_IMGUI)
+    target_link_libraries(volumetric_skinning PUBLIC imgui)
 endif ()
 
 

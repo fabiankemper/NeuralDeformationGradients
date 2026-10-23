@@ -10,7 +10,5 @@ set(SOURCES
     diffgeo.cpp
 )
 
-add_executable(test_ls_diffgeo prism_diffgeo.cpp)
-target_link_libraries(test_ls_diffgeo PUBLIC volumetric_base)
 target_sources(volumetric_base PUBLIC ${SOURCES} ${HEADERS})
 
