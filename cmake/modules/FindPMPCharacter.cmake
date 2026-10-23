@@ -11,9 +11,7 @@ set(HEADERS
     "${PMP_CHARACTER_SRC_DIR}/PropertyNames.h"
     "${PMP_CHARACTER_SRC_DIR}/Skeleton.h"
     "${PMP_CHARACTER_SRC_DIR}/Types.h"
-    "${PMP_CHARACTER_SRC_DIR}/fbxfile/fbx_export.h"
     "${PMP_CHARACTER_SRC_DIR}/fbxfile/fbx_file.h"
-    "${PMP_CHARACTER_SRC_DIR}/fbxfile/fbx_warnings.h"
     "${PMP_CHARACTER_SRC_DIR}/gltf_file/gltf_file.h"
     "${PMP_CHARACTER_SRC_DIR}/gltf_file/gltf_reader.h"
     "${PMP_CHARACTER_SRC_DIR}/gltf_file/gltf_writer.h"
@@ -31,7 +29,6 @@ set(SOURCES
     "${PMP_CHARACTER_SRC_DIR}/Joint.cpp"
     "${PMP_CHARACTER_SRC_DIR}/MeshNode.cpp"
     "${PMP_CHARACTER_SRC_DIR}/Skeleton.cpp"
-    "${PMP_CHARACTER_SRC_DIR}/fbxfile/fbx_export.cpp"
     "${PMP_CHARACTER_SRC_DIR}/fbxfile/fbx_file.cpp"
     "${PMP_CHARACTER_SRC_DIR}/node_types/Character.cpp"
     "${PMP_CHARACTER_SRC_DIR}/node_types/PointSet.cpp"
@@ -62,8 +59,9 @@ endif ()
 
 add_library(PMPCharacter STATIC ${SOURCES} ${HEADERS})
 
-target_include_directories(PMPCharacter PUBLIC "${PMP_CHARACTER_EXT_DIR}/src" ${FBX_INCLUDE_DIRS})
-target_link_libraries(PMPCharacter PUBLIC pmp nlohmann_json::nlohmann_json ${FBX_LIBRARIES})
+target_include_directories(PMPCharacter PUBLIC "${PMP_CHARACTER_EXT_DIR}/src")
+target_link_libraries(PMPCharacter PUBLIC pmp nlohmann_json::nlohmann_json)
+target_link_libraries(PMPCharacter PRIVATE ufbx)
 
 if (PMP_BUILD_VIS)
     # append STB Image as Library

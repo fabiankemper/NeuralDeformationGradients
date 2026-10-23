@@ -68,8 +68,8 @@ include(cmake/modules/FastRotationFitting.cmake)
 # cmake modules
 include(FetchContent)
 
-# fbx sdk
-include(cmake/modules/FindSystemFBX.cmake)
+# ufbx (fbx loading)
+include(cmake/modules/UFBX.cmake)
 
 # nlohmann json
 include(cmake/macros/Find_Nlohmann_JSON.cmake)

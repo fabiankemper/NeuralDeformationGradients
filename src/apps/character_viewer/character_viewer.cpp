@@ -9,7 +9,6 @@
 #include <imgui.h>
 
 #include <pmp/io/io.h>
-#include <pmp_character/fbxfile/fbx_export.h>
 #include <pmp_character/fbxfile/fbx_file.h>
 
 #include "volanim_utils/random_utils.h"

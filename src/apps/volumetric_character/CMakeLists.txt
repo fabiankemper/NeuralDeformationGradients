@@ -26,9 +26,6 @@ target_include_directories(volumetric_character_vis PUBLIC "${PROJECT_SOURCE_DIR
 #    INTERFACE_INCLUDE_DIRECTORIES "${PMP_CHARACTER_EXT_DIR}/src/apps"
 #)
 
-# FBX SDK
-target_include_directories(volumetric_character PUBLIC ${FBX_INCLUDE_DIRS})
-target_link_libraries(volumetric_character PUBLIC ${FBX_LIBRARIES})
 # note, we do not add the "volumetric_character" directory as prefix
 #target_include_directories(volumetric_character PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

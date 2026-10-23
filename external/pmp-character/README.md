@@ -41,13 +41,13 @@ skinned meshes and a skeleton structure.
 When loading a `Character` there are 2 ways to do this. 
 
 ### FBX
-When you have a working `FBXSDK` you can load a character from an fbx file. 
-For this you need to use the `fbx_file` class, which handles all loading operations.
-After creating a `fbx_file` Object, you can use the `load` method to load a character into a predefined variable.
+You can load a character from an fbx file using the bundled [ufbx](https://github.com/ufbx/ufbx) loader. 
+For this you need to use the `FBX_file` class, which handles all loading operations.
+After creating a `FBX_file` Object, you can use the `read` method to load a character into a predefined variable.
+Writing fbx files is not supported, export to gltf instead.
 
 ### GLTF
-You can load a Character from a `.glb` or `.gltf` file in a similar way to fbx,
-but you do not need a fbxsdk installation. You can also export to gltf quite easily. 
+You can load a Character from a `.glb` or `.gltf` file in a similar way to fbx. You can also export to gltf quite easily. 
 When importing a Character from `.glb` or `.gltf` you once again create a `gltf_file` object. 
 Then you create a `std::shared_ptr<Character>` to the Character to be stored in. 
 This could also just be a pointer and is subject to change. 

@@ -5,7 +5,6 @@
 
 #include "barycentric_warp.h"
 #include "bary_warp.h"
-#include "fbxsdk/core/fbxsystemunit.h"
 
 // =====================================================================================================================
 

@@ -4,6 +4,10 @@
 
 #include <vector>
 
+#ifndef NO_USE_OPENMP
+#include <omp.h>
+#endif
+
 
 namespace nonlinear_elasticity::collisions {
     bool vertex_in_tet(const Eigen::PartialPivLU<Eigen::Matrix3d> &T, const Eigen::Vector3d &v) {
@@ -138,14 +142,22 @@ CollisionDetection::test_for_prism_collision_candidates(
         std::vector<std::tuple<volumetric_base::LayerVertex, volumetric_base::Prism, Eigen::Vector4d, Eigen::Vector4i>> collisions;
         const auto prisms = mesh.getPrisms();
         const Eigen::MatrixXd positions = mesh.toVertexMatrix();
+#ifdef NO_USE_OPENMP
+        int num_threads = 1;
+#else
         int num_threads = omp_get_max_threads();
+#endif
         std::vector<std::vector<std::tuple<volumetric_base::LayerVertex, volumetric_base::Prism, Eigen::Vector4d, Eigen::Vector4i>> > thread_collisions(num_threads);
 
         #pragma omp parallel for
         for (int i = 0; i < static_cast<int> (prisms.size()); ++i) {
             const auto &prism = prisms[i];
             const auto & [j1,j2,j3,j4,j5,j6] = mesh.getIndices(prism);
+#ifdef NO_USE_OPENMP
+            int tid=0;
+#else
             int tid=omp_get_thread_num();
+#endif
             auto& local = thread_collisions[tid];
             Eigen::Matrix<double,3,6> points;
             points.col(0) = positions.row(j1);

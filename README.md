@@ -32,8 +32,6 @@ brew install libomp
 
 For installation of ONNX runtime follow the instructions in the [documentation](https://onnxruntime.ai/docs/install/) and download the [release tarball](https://github.com/microsoft/onnxruntime/releases) which matches your system.
 
-For installation of the [FBXSDK](https://aps.autodesk.com/developer/overview/fbx-sdk) follow the Autodesk installation guides. You might adjust the CMAKE Variable `FBX_EXT_DIR` to point to your installation dir.
-
 
 ### Getting the models
 
