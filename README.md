@@ -1,5 +1,7 @@
 # Neural Deformation Gradients
 
+Official implementation of the paper [Skeletal-Driven Animation of Anatomical Humans via Neural Deformation Gradients](https://doi.org/10.1111/cgf.70388) (Computer Graphics Forum, Eurographics 2026).
+
 ## Installation
 
 ### Clone the repository
@@ -99,3 +101,19 @@ Optionally, you can set a path to samples from InsideHumans
 - **B** for showing previous frame in timeline.
 - **M** for exporting current frame number into `marked_frames.txt`
 - **BACKSPACE** reset Camera.
+
+## Citation
+
+If you use this code in your research, please cite our paper:
+
+```bibtex
+@article{nolte2026ndg,
+  title   = {Skeletal-Driven Animation of Anatomical Humans via Neural Deformation Gradients},
+  author  = {Nolte, G. and Kemper, F. and Schwanecke, U. and Botsch, M.},
+  journal = {Computer Graphics Forum},
+  volume  = {45},
+  number  = {2},
+  year    = {2026},
+  doi     = {10.1111/cgf.70388}
+}
+```
