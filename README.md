@@ -109,7 +109,7 @@ If you use this code in your research, please cite our paper:
 ```bibtex
 @article{nolte2026ndg,
   title   = {Skeletal-Driven Animation of Anatomical Humans via Neural Deformation Gradients},
-  author  = {Nolte, G. and Kemper, F. and Schwanecke, U. and Botsch, M.},
+  author  = {Nolte, Gerrit and Kemper, Fabian and Schwanecke, Ulrich and Botsch, Mario},
   journal = {Computer Graphics Forum},
   volume  = {45},
   number  = {2},
